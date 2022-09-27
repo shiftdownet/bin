@@ -1,0 +1,733 @@
+<!DOCTYPE html><html><head>
+      <title>sample</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\roki\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.3\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <script>
+const meta = {
+    documentName: "Document Name",          // 文書名
+    documentID:"documentID",                // 文書ID
+    version: "00",                          // バージョン
+    system: "System",                       // システム
+    vehicle: "Vehicle",                     // 車両
+    customer: "Customer",                   // 顧客
+    asil: "QM",                             // ASIL
+    issued: "Publisher Name"                // 版権
+};
+</script>
+<h1 class="mume-header" id="1-document-information">1. Document information</h1>
+
+<dl>
+<dt>Document Name</dt>
+<dd>{meta.documentName}</dd>
+<dt>Document ID</dt>
+<dd>{meta.documentID}</dd>
+<dt>Version</dt>
+<dd>{meta.version}</dd>
+<dt>System</dt>
+<dd>{meta.system}</dd>
+<dt>Vehicle</dt>
+<dd>{meta.vehicle}</dd>
+<dt>Customer</dt>
+<dd>{meta.customer}</dd>
+<dt>ASIL</dt>
+<dd>{meta.asil}</dd>
+<dt>Issued by</dt>
+<dd>{meta.issued}</dd>
+</dl>
+<h1 class="mume-header" id="2-history">2. History</h1>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Version</th>
+<th style="text-align:left">Issued date</th>
+<th style="text-align:left">Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">00</td>
+<td style="text-align:left">2022-00-00</td>
+<td style="text-align:left">New release</td>
+</tr>
+</tbody>
+</table>
+<h1 class="mume-header" id="3-how-to-use-this-document">3. How to use this document</h1>
+
+<h2 class="mume-header" id="31-%E8%A1%A8%E3%82%92%E5%A4%96%E9%83%A8%E3%81%AEcsv%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%8B%E3%82%89%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88%E3%81%99%E3%82%8B%E4%BE%8B">3.1. &#x8868;&#x3092;&#x5916;&#x90E8;&#x306E;csv&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x304B;&#x3089;&#x30A4;&#x30F3;&#x30DD;&#x30FC;&#x30C8;&#x3059;&#x308B;&#x4F8B;</h2>
+
+<table>
+<thead>
+<tr>
+<th>a</th>
+<th>b</th>
+<th>c</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>d</td>
+<td>e</td>
+<td>f</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<h2 class="mume-header" id="32-%E8%A1%A8%E3%81%AE%E7%B5%90%E5%90%88%E3%82%92%E8%A1%8C%E3%81%86%E4%BE%8B">3.2. &#x8868;&#x306E;&#x7D50;&#x5408;&#x3092;&#x884C;&#x3046;&#x4F8B;</h2>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left">left</th>
+<th style="text-align:center">center</th>
+<th style="text-align:right">right</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+
+
+<td style="text-align:right" colspan="3">A</td>
+</tr>
+<tr>
+<td style="text-align:left">B</td>
+<td style="text-align:center" rowspan="2">C</td>
+<td style="text-align:right">D</td>
+</tr>
+<tr>
+<td style="text-align:left">E</td>
+
+<td style="text-align:right">F</td>
+</tr>
+</tbody>
+</table>
+<h2 class="mume-header" id="33-%E3%83%80%E3%82%A4%E3%82%A2%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%AE%E4%BD%9C%E6%88%90%E4%BE%8B">3.3. &#x30C0;&#x30A4;&#x30A2;&#x30B0;&#x30E9;&#x30E0;&#x306E;&#x4F5C;&#x6210;&#x4F8B;</h2>
+
+<h3 class="mume-header" id="331-%E9%9D%99%E7%9A%84%E3%83%80%E3%82%A4%E3%82%A2%E3%82%B0%E3%83%A9%E3%83%A0">3.3.1. &#x9759;&#x7684;&#x30C0;&#x30A4;&#x30A2;&#x30B0;&#x30E9;&#x30E0;</h3>
+
+<h4 class="mume-header" id="3311-%E3%82%AF%E3%83%A9%E3%82%B9%E5%9B%B3">3.3.1.1. &#x30AF;&#x30E9;&#x30B9;&#x56F3;</h4>
+
+<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentscripttype="application/ecmascript" contentstyletype="text/css" height="359px" preserveAspectRatio="none" style="width:374px;height:359px;background:#FFFFFF;" version="1.1" viewBox="0 0 374 359" width="374px" zoomAndPan="magnify"><defs><filter height="300%" id="fp48pyour87vn" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[322eb4f23444bc525bf607471be5b089]
+class classA--><rect codeline="1" fill="#FEFECE" filter="url(#fp48pyour87vn)" height="139.0156" id="classA" style="stroke:#A80036;stroke-width:1.5;" width="158" x="7" y="206"/><ellipse cx="63.25" cy="222" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M66.0156,217.875 Q66.1719,217.6563 66.3594,217.5469 Q66.5469,217.4375 66.7656,217.4375 Q67.1406,217.4375 67.375,217.6953 Q67.6094,217.9531 67.6094,218.5625 L67.6094,220.0156 Q67.6094,220.625 67.375,220.8906 Q67.1406,221.1563 66.7656,221.1563 Q66.4219,221.1563 66.2188,220.9531 Q66.0156,220.7656 65.9063,220.25 Q65.8594,219.8906 65.6719,219.7031 Q65.3438,219.3281 64.7344,219.1094 Q64.125,218.8906 63.5,218.8906 Q62.7344,218.8906 62.1016,219.2188 Q61.4688,219.5469 60.9766,220.2969 Q60.4844,221.0469 60.4844,222.0781 L60.4844,223.1719 Q60.4844,224.4063 61.375,225.2266 Q62.2656,226.0469 63.8594,226.0469 Q64.7969,226.0469 65.4531,225.7969 Q65.8438,225.6406 66.2656,225.2031 Q66.5313,224.9375 66.6797,224.8594 Q66.8281,224.7813 67.0313,224.7813 Q67.3594,224.7813 67.6172,225.0391 Q67.875,225.2969 67.875,225.6406 Q67.875,225.9844 67.5313,226.3906 Q67.0313,226.9688 66.2344,227.2969 Q65.1563,227.75 63.8594,227.75 Q62.3438,227.75 61.1406,227.125 Q60.1563,226.625 59.4688,225.5547 Q58.7813,224.4844 58.7813,223.2031 L58.7813,222.0469 Q58.7813,220.7188 59.3984,219.5703 Q60.0156,218.4219 61.1094,217.8047 Q62.2031,217.1875 63.4375,217.1875 Q64.1719,217.1875 64.8203,217.3516 Q65.4688,217.5156 66.0156,217.875 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="37" x="83.75" y="226.9102">classA</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="164" y1="238" y2="238"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="89" x="13" y="253.4189">ID;;AAA-BBB-CCC</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="90" x="13" y="267.2549">REF;;DDD-EEE-FFF</text><line style="stroke:#A80036;stroke-width:1.0;" x1="8" x2="164" y1="273.6719" y2="273.6719"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="146" x="13" y="289.0908">XX&#x306E;&#x8CAC;&#x52D9;&#x3092;&#x6301;&#x3064;&#x30AF;&#x30E9;&#x30B9;&#x3067;&#x3059;&#x3002;</text><line style="stroke:#A80036;stroke-width:1.0;" x1="8" x2="164" y1="295.5078" y2="295.5078"/><ellipse cx="18" cy="306.5078" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="115" x="27" y="310.9268">f_tsk_interfaceA( void )</text><ellipse cx="18" cy="320.3438" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="115" x="27" y="324.7627">f_get_interfaceB( void )</text><ellipse cx="18" cy="334.1797" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="115" x="27" y="338.5986">f_set_interfaceC( void )</text><!--MD5=[e502eb485fe84147b77151ba3c07d513]
+class classB--><rect codeline="12" fill="#FEFECE" filter="url(#fp48pyour87vn)" height="139.0156" id="classB" style="stroke:#A80036;stroke-width:1.5;" width="160" x="200" y="206"/><ellipse cx="256.75" cy="222" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M259.5156,217.875 Q259.6719,217.6563 259.8594,217.5469 Q260.0469,217.4375 260.2656,217.4375 Q260.6406,217.4375 260.875,217.6953 Q261.1094,217.9531 261.1094,218.5625 L261.1094,220.0156 Q261.1094,220.625 260.875,220.8906 Q260.6406,221.1563 260.2656,221.1563 Q259.9219,221.1563 259.7188,220.9531 Q259.5156,220.7656 259.4063,220.25 Q259.3594,219.8906 259.1719,219.7031 Q258.8438,219.3281 258.2344,219.1094 Q257.625,218.8906 257,218.8906 Q256.2344,218.8906 255.6016,219.2188 Q254.9688,219.5469 254.4766,220.2969 Q253.9844,221.0469 253.9844,222.0781 L253.9844,223.1719 Q253.9844,224.4063 254.875,225.2266 Q255.7656,226.0469 257.3594,226.0469 Q258.2969,226.0469 258.9531,225.7969 Q259.3438,225.6406 259.7656,225.2031 Q260.0313,224.9375 260.1797,224.8594 Q260.3281,224.7813 260.5313,224.7813 Q260.8594,224.7813 261.1172,225.0391 Q261.375,225.2969 261.375,225.6406 Q261.375,225.9844 261.0313,226.3906 Q260.5313,226.9688 259.7344,227.2969 Q258.6563,227.75 257.3594,227.75 Q255.8438,227.75 254.6406,227.125 Q253.6563,226.625 252.9688,225.5547 Q252.2813,224.4844 252.2813,223.2031 L252.2813,222.0469 Q252.2813,220.7188 252.8984,219.5703 Q253.5156,218.4219 254.6094,217.8047 Q255.7031,217.1875 256.9375,217.1875 Q257.6719,217.1875 258.3203,217.3516 Q258.9688,217.5156 259.5156,217.875 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="38" x="277.25" y="226.9102">classB</text><line style="stroke:#A80036;stroke-width:1.5;" x1="201" x2="359" y1="238" y2="238"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="89" x="206" y="253.4189">ID;;AAA-BBB-CCC</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="90" x="206" y="267.2549">REF;;DDD-EEE-FFF</text><line style="stroke:#A80036;stroke-width:1.0;" x1="201" x2="359" y1="273.6719" y2="273.6719"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="148" x="206" y="289.0908">YY&#x306E;&#x8CAC;&#x52D9;&#x3092;&#x6301;&#x3064;&#x30AF;&#x30E9;&#x30B9;&#x3067;&#x3059;&#x3002;</text><line style="stroke:#A80036;stroke-width:1.0;" x1="201" x2="359" y1="295.5078" y2="295.5078"/><ellipse cx="211" cy="306.5078" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="115" x="220" y="310.9268">f_tsk_interfaceA( void )</text><ellipse cx="211" cy="320.3438" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="115" x="220" y="324.7627">f_get_interfaceB( void )</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="208" y="331.1797"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="115" x="220" y="338.5986">f_set_interfaceC( void )</text><!--MD5=[2f6bf7f9eff74970a6a3bde78657480a]
+class classC--><rect codeline="23" fill="#FEFECE" filter="url(#fp48pyour87vn)" height="139.0156" id="classC" style="stroke:#A80036;stroke-width:1.5;" width="158" x="201" y="7"/><ellipse cx="256.25" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M259.0156,18.875 Q259.1719,18.6563 259.3594,18.5469 Q259.5469,18.4375 259.7656,18.4375 Q260.1406,18.4375 260.375,18.6953 Q260.6094,18.9531 260.6094,19.5625 L260.6094,21.0156 Q260.6094,21.625 260.375,21.8906 Q260.1406,22.1563 259.7656,22.1563 Q259.4219,22.1563 259.2188,21.9531 Q259.0156,21.7656 258.9063,21.25 Q258.8594,20.8906 258.6719,20.7031 Q258.3438,20.3281 257.7344,20.1094 Q257.125,19.8906 256.5,19.8906 Q255.7344,19.8906 255.1016,20.2188 Q254.4688,20.5469 253.9766,21.2969 Q253.4844,22.0469 253.4844,23.0781 L253.4844,24.1719 Q253.4844,25.4063 254.375,26.2266 Q255.2656,27.0469 256.8594,27.0469 Q257.7969,27.0469 258.4531,26.7969 Q258.8438,26.6406 259.2656,26.2031 Q259.5313,25.9375 259.6797,25.8594 Q259.8281,25.7813 260.0313,25.7813 Q260.3594,25.7813 260.6172,26.0391 Q260.875,26.2969 260.875,26.6406 Q260.875,26.9844 260.5313,27.3906 Q260.0313,27.9688 259.2344,28.2969 Q258.1563,28.75 256.8594,28.75 Q255.3438,28.75 254.1406,28.125 Q253.1563,27.625 252.4688,26.5547 Q251.7813,25.4844 251.7813,24.2031 L251.7813,23.0469 Q251.7813,21.7188 252.3984,20.5703 Q253.0156,19.4219 254.1094,18.8047 Q255.2031,18.1875 256.4375,18.1875 Q257.1719,18.1875 257.8203,18.3516 Q258.4688,18.5156 259.0156,18.875 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="39" x="276.75" y="27.9102">classC</text><line style="stroke:#A80036;stroke-width:1.5;" x1="202" x2="358" y1="39" y2="39"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="89" x="207" y="54.4189">ID;;AAA-BBB-CCC</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="90" x="207" y="68.2549">REF;;DDD-EEE-FFF</text><line style="stroke:#A80036;stroke-width:1.0;" x1="202" x2="358" y1="74.6719" y2="74.6719"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="146" x="207" y="90.0908">ZZ&#x306E;&#x8CAC;&#x52D9;&#x3092;&#x6301;&#x3064;&#x30AF;&#x30E9;&#x30B9;&#x3067;&#x3059;&#x3002;</text><line style="stroke:#A80036;stroke-width:1.0;" x1="202" x2="358" y1="96.5078" y2="96.5078"/><ellipse cx="212" cy="107.5078" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="115" x="221" y="111.9268">f_tsk_interfaceA( void )</text><ellipse cx="212" cy="121.3438" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="115" x="221" y="125.7627">f_get_interfaceB( void )</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="209" y="132.1797"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="115" x="221" y="139.5986">f_set_interfaceC( void )</text><!--MD5=[e3d01aabe56089f63fa058a6edf28680]
+link classA to classB--><path codeline="34" d="M165.19,275.5 C174.99,275.5 184.8,275.5 194.6,275.5 " fill="none" id="classA-to-classB" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="199.72,275.5,190.72,271.5,194.72,275.5,190.72,279.5,199.72,275.5" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[e0e72e762d1797880d9173afea61effb]
+link classC to classB--><path codeline="35" d="M280,146.12 C280,163.79 280,182.86 280,200.77 " fill="none" id="classC-to-classB" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="280,205.79,284,196.79,280,200.79,276,196.79,280,205.79" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[397f0b62fa4e8359f728e8b9078abd14]
+@startuml
+class classA {
+    ID;;AAA-BBB-CCC
+    REF;;DDD-EEE-FFF
+    - - -
+    XXの責務を持つクラスです。
+    - - -
+    + f_tsk_interfaceA( void )
+    + f_get_interfaceB( void )
+    + f_set_interfaceC( void )
+}
+
+class classB {
+    ID;;AAA-BBB-CCC
+    REF;;DDD-EEE-FFF
+    - - -
+    YYの責務を持つクラスです。
+    - - -
+    + f_tsk_interfaceA( void )
+    + f_get_interfaceB( void )
+    - f_set_interfaceC( void )
+}
+
+class classC {
+    ID;;AAA-BBB-CCC
+    REF;;DDD-EEE-FFF
+    - - -
+    ZZの責務を持つクラスです。
+    - - -
+    + f_tsk_interfaceA( void )
+    + f_get_interfaceB( void )
+    - f_set_interfaceC( void )
+}
+
+classA -> classB
+classC - -> classB
+@enduml
+
+PlantUML version 1.2021.12(Wed Oct 06 01:01:58 JST 2021)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) Client VM
+Default Encoding: UTF-8
+Language: ja
+Country: JP
+--></g></svg></p><h3 class="mume-header" id="332-%E4%BB%BB%E6%84%8F%E3%81%AE%E5%9B%B3%E8%87%AA%E7%94%B1%E5%BA%A6%E9%AB%98%E3%81%84%E3%81%91%E3%81%A9-%E8%BF%BD%E5%8A%A0%E5%89%8A%E9%99%A4%E3%81%AE%E3%83%A1%E3%83%B3%E3%83%86%E3%82%B3%E3%82%B9%E3%83%88%E5%A4%A7">3.3.2. &#x4EFB;&#x610F;&#x306E;&#x56F3;(&#x81EA;&#x7531;&#x5EA6;&#x9AD8;&#x3044;&#x3051;&#x3069;&#x3001;&#x8FFD;&#x52A0;&#x524A;&#x9664;&#x306E;&#x30E1;&#x30F3;&#x30C6;&#x30B3;&#x30B9;&#x30C8;&#x5927;)</h3>
+
+<p code_chunk_offset="0" cmd="true" args="[&quot;-E&quot;]"><!--?xml version='1.0' encoding='UTF-8' standalone='no'?-->
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="182" shape-rendering="geometricPrecision" version="1.0">
+  <defs>
+    <filter id="f2" x="0" y="0" width="200%" height="200%">
+      <feOffset result="offOut" in="SourceGraphic" dx="5" dy="5"/>
+      <feGaussianBlur result="blurOut" in="offOut" stdDeviation="3"/>
+      <feBlend in="SourceGraphic" in2="blurOut" mode="normal"/>
+    </filter>
+  </defs>
+  <g stroke-width="1" stroke-linecap="square" stroke-linejoin="round">
+    <rect x="0" y="0" width="390" height="182" style="fill: #ffffff"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M25.0 35.0 L115.0 35.0 L115.0 105.0 Q85.0 97.0 70.0 105.0 Q55.0 113.0 25.0 105.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M285.0 105.0 L365.0 105.0 L365.0 35.0 L285.0 35.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M155.0 105.0 L235.0 105.0 L235.0 63.0 L155.0 63.0 z"/>
+    <path stroke="gray" fill="gray" filter="url(#f2)" d="M155.0 63.0 L235.0 63.0 L235.0 35.0 L155.0 35.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-dasharray="5.000000,5.000000" stroke-miterlimit="0" stroke-linecap="butt" stroke-linejoin="round" fill="white" d="M65.0 105.0 L65.0 147.0 L325.0 147.0 L325.0 119.0 "/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M25.0 35.0 L115.0 35.0 L115.0 105.0 Q85.0 97.0 70.0 105.0 Q55.0 113.0 25.0 105.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M285.0 105.0 L365.0 105.0 L365.0 35.0 L285.0 35.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M155.0 105.0 L235.0 105.0 L235.0 63.0 L155.0 63.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M155.0 63.0 L235.0 63.0 L235.0 35.0 L155.0 35.0 z"/>
+    <path stroke="none" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="#000000" d="M260.0 42.0 L270.0 49.0 L260.0 56.0 z"/>
+    <path stroke="none" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="#000000" d="M325.0 112.0 L320.0 126.0 L330.0 126.0 z"/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M155.0 49.0 L135.0 49.0 "/>
+    <path stroke="#000000" stroke-width="1.000000" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M265.0 49.0 L235.0 49.0 "/>
+    <text x="55" y="68" font-family="Courier" font-size="14" stroke="none" fill="#000000">Text</text>
+    <text x="35" y="82" font-family="Courier" font-size="14" stroke="none" fill="#000000">Document</text>
+    <text x="157" y="138" font-family="Courier" font-size="14" stroke="none" fill="#000000">Lots of work</text>
+    <text x="178" y="54" font-family="Courier" font-size="14" stroke="none" fill="#000000">ditaa</text>
+    <text x="171" y="82" font-family="Courier" font-size="14" stroke="none" fill="#000000">!magic!</text>
+    <text x="297" y="68" font-family="Courier" font-size="14" stroke="none" fill="#000000">diagram</text>
+  </g>
+</svg></p><h3 class="mume-header" id="333-%E3%83%87%E3%83%BC%E3%82%BF%E6%A7%8B%E9%80%A0json">3.3.3. &#x30C7;&#x30FC;&#x30BF;&#x69CB;&#x9020;(json)</h3>
+
+<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentscripttype="application/ecmascript" contentstyletype="text/css" height="98px" preserveAspectRatio="none" style="width:197px;height:98px;background:#FFFFFF;" version="1.1" viewBox="0 0 197 98" width="197px" zoomAndPan="magnify"><defs/><g><rect fill="#FEFECE" height="64.8281" rx="5" ry="5" style="stroke:#FEFECE;stroke-width:1.5;" width="88" x="10" y="10"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="24" x="15" y="26.5332">fruit</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="36" x="56" y="26.5332">Apple</text><line style="stroke:#A80036;stroke-width:1.0;" x1="51" x2="51" y1="10" y2="31.6094"/><line style="stroke:#A80036;stroke-width:1.0;" x1="10" x2="98" y1="31.6094" y2="31.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="24" x="15" y="48.1426">size</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="37" x="56" y="48.1426">Large</text><line style="stroke:#A80036;stroke-width:1.0;" x1="51" x2="51" y1="31.6094" y2="53.2188"/><line style="stroke:#A80036;stroke-width:1.0;" x1="10" x2="98" y1="53.2188" y2="53.2188"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="31" x="15" y="69.752">color</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="68" y="69.752"/><line style="stroke:#A80036;stroke-width:1.0;" x1="51" x2="51" y1="53.2188" y2="74.8281"/><rect fill="none" height="64.8281" rx="5" ry="5" style="stroke:#A80036;stroke-width:1.5;" width="88" x="10" y="10"/><rect fill="#FEFECE" height="43.2188" rx="5" ry="5" style="stroke:#FEFECE;stroke-width:1.5;" width="50" x="135" y="43"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="26" x="140" y="59.5332">Red</text><line style="stroke:#A80036;stroke-width:1.0;" x1="135" x2="185" y1="64.6094" y2="64.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40" x="140" y="81.1426">Green</text><rect fill="none" height="43.2188" rx="5" ry="5" style="stroke:#A80036;stroke-width:1.5;" width="50" x="135" y="43"/><path d="M86,64.5 L99,64.5 C108.3547,64.5 118.5229,64.5 127.8065,64.5 " fill="none" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:3.0,3.0;"/><path d="M127.8065,67.5211 L130.0723,64.5 L127.8065,61.4789 L135.3593,64.5 L127.8065,67.5211 " fill="#A80036" style="stroke:#A80036;stroke-width:1.0;"/><ellipse cx="86" cy="64.5" fill="#A80036" rx="3" ry="3" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[ec85dc2e20b46830de892761cdb09e66]
+@startjson
+{
+   "fruit":"Apple",
+   "size":"Large",
+   "color": ["Red", "Green"]
+}
+@endjson
+
+PlantUML version 1.2021.12(Wed Oct 06 01:01:58 JST 2021)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) Client VM
+Default Encoding: UTF-8
+Language: ja
+Country: JP
+--></g></svg></p><h3 class="mume-header" id="334-%E9%9A%8E%E5%B1%A4%E6%A7%8B%E9%80%A0">3.3.4. &#x968E;&#x5C64;&#x69CB;&#x9020;</h3>
+
+<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentscripttype="application/ecmascript" contentstyletype="text/css" height="174px" preserveAspectRatio="none" style="width:196px;height:174px;background:#FFFFFF;" version="1.1" viewBox="0 0 196 174" width="196px" zoomAndPan="magnify"><defs/><g><path d="M34,20.1875 L34,24.1875 L50,24.1875 L50,22.1875 L40,22.1875 L40,20.1875 L34,20.1875 M34,26.1875 L34,35.1875 C34,35.7475 34.44,36.1875 35,36.1875 L49,36.1875 C49.56,36.1875 50,35.7475 50,35.1875 L50,26.1875 L34,26.1875 " fill="#000000" style="stroke:;stroke-width:0.0;stroke-dasharray:;"/><text fill="#000000" font-family="sans-serif" font-size="24" lengthAdjust="spacing" textLength="106" x="52" y="36.9141">directoryA</text><path d="M54,50.375 L54,54.375 L70,54.375 L70,52.375 L60,52.375 L60,50.375 L54,50.375 M54,56.375 L54,65.375 C54,65.935 54.44,66.375 55,66.375 L69,66.375 C69.56,66.375 70,65.935 70,65.375 L70,56.375 L54,56.375 " fill="#000000" style="stroke:;stroke-width:0.0;stroke-dasharray:;"/><text fill="#000000" font-family="sans-serif" font-size="24" lengthAdjust="spacing" textLength="108" x="72" y="67.1016">directoryB</text><path d="M74,80.5625 L74,96.5625 L88,96.5625 L88,88.5625 L80,88.5625 L80,80.5625 L74,80.5625 M82,80.5625 L82,86.5625 L88,86.5625 L82,80.5625 " fill="#000000" style="stroke:;stroke-width:0.0;stroke-dasharray:;"/><text fill="#000000" font-family="sans-serif" font-size="24" lengthAdjust="spacing" textLength="46" x="92" y="97.2891">fileA</text><path d="M74,110.75 L74,126.75 L88,126.75 L88,118.75 L80,118.75 L80,110.75 L74,110.75 M82,110.75 L82,116.75 L88,116.75 L82,110.75 " fill="#000000" style="stroke:;stroke-width:0.0;stroke-dasharray:;"/><text fill="#000000" font-family="sans-serif" font-size="24" lengthAdjust="spacing" textLength="48" x="92" y="127.4766">fileB</text><path d="M54,140.9375 L54,144.9375 L70,144.9375 L70,142.9375 L60,142.9375 L60,140.9375 L54,140.9375 M54,146.9375 L54,155.9375 C54,156.4975 54.44,156.9375 55,156.9375 L69,156.9375 C69.56,156.9375 70,156.4975 70,155.9375 L70,146.9375 L54,146.9375 " fill="#000000" style="stroke:;stroke-width:0.0;stroke-dasharray:;"/><text fill="#000000" font-family="sans-serif" font-size="24" lengthAdjust="spacing" textLength="110" x="72" y="157.6641">directoryC</text><rect fill="none" height="4" style="stroke:#888888;stroke-width:2.0;" width="4" x="18" y="25.0938"/><rect fill="none" height="4" style="stroke:#888888;stroke-width:2.0;" width="4" x="38" y="55.2813"/><line style="stroke:#888888;stroke-width:2.0;" x1="20" x2="20" y1="31.0938" y2="57.2813"/><line style="stroke:#888888;stroke-width:2.0;" x1="20" x2="36" y1="57.2813" y2="57.2813"/><line style="stroke:#888888;stroke-width:2.0;" x1="40" x2="40" y1="61.2813" y2="87.4688"/><line style="stroke:#888888;stroke-width:2.0;" x1="40" x2="56" y1="87.4688" y2="87.4688"/><line style="stroke:#888888;stroke-width:2.0;" x1="40" x2="40" y1="61.2813" y2="117.6563"/><line style="stroke:#888888;stroke-width:2.0;" x1="40" x2="56" y1="117.6563" y2="117.6563"/><line style="stroke:#888888;stroke-width:2.0;" x1="20" x2="20" y1="31.0938" y2="147.8438"/><line style="stroke:#888888;stroke-width:2.0;" x1="20" x2="36" y1="147.8438" y2="147.8438"/><!--MD5=[40269531b848fbeb6f206e47ee702cba]
+@startsalt
+scale 2
+{
+{T
+ + <&folder>directoryA
+ ++ <&folder>directoryB
+ +++ <&file>fileA 
+ +++ <&file>fileB
+ ++ <&folder>directoryC
+}
+}
+@endsalt
+
+PlantUML version 1.2021.12(Wed Oct 06 01:01:58 JST 2021)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) Client VM
+Default Encoding: UTF-8
+Language: ja
+Country: JP
+--></g></svg></p><h3 class="mume-header" id="335-%E5%8B%95%E7%9A%84%E3%83%80%E3%82%A4%E3%82%A2%E3%82%B0%E3%83%A9%E3%83%A0">3.3.5. &#x52D5;&#x7684;&#x30C0;&#x30A4;&#x30A2;&#x30B0;&#x30E9;&#x30E0;</h3>
+
+<h4 class="mume-header" id="3351-%E3%82%A2%E3%82%AF%E3%83%86%E3%82%A3%E3%83%93%E3%83%86%E3%82%A3%E5%9B%B3">3.3.5.1. &#x30A2;&#x30AF;&#x30C6;&#x30A3;&#x30D3;&#x30C6;&#x30A3;&#x56F3;</h4>
+
+<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentscripttype="application/ecmascript" contentstyletype="text/css" height="577px" preserveAspectRatio="none" style="width:269px;height:577px;background:#FFFFFF;" version="1.1" viewBox="0 0 269 577" width="269px" zoomAndPan="magnify"><defs><filter height="300%" id="fgy8eepap5t9j" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><ellipse cx="125.5" cy="20" fill="#000000" filter="url(#fgy8eepap5t9j)" rx="10" ry="10" style="stroke:none;stroke-width:1.0;"/><rect fill="#FEFECE" filter="url(#fgy8eepap5t9j)" height="35.0938" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="106" x="72.5" y="94"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="86" x="82.5" y="116.457">Test something</text><rect fill="#98FB98" filter="url(#fgy8eepap5t9j)" height="35.0938" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="37" x="107" y="198.0117"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="17" x="117" y="220.4688">OK</text><polygon fill="#FEFECE" filter="url(#fgy8eepap5t9j)" points="66,149.0938,185,149.0938,197,161.0938,185,173.0938,66,173.0938,54,161.0938,66,149.0938" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="12" x="129.5" y="184.5127">no</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="119" x="66" y="165.5947">Something went wrong?</text><rect fill="#FEFECE" filter="url(#fgy8eepap5t9j)" height="35.0938" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="155" x="48" y="305.2295"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="135" x="58" y="327.6865">Alert &quot;Error with long text&quot;</text><polygon fill="#FEFECE" filter="url(#fgy8eepap5t9j)" points="125.5,50,137.5,62,125.5,74,113.5,62,125.5,50" style="stroke:#A80036;stroke-width:1.5;"/><polygon fill="#FEFECE" filter="url(#fgy8eepap5t9j)" points="32,360.3232,219,360.3232,231,372.3232,219,384.3232,32,384.3232,20,372.3232,32,360.3232" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="12" x="129.5" y="395.7422">no</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="187" x="32" y="376.8242">Something went wrong with long text?</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="18" x="231" y="369.9063">yes</text><polygon fill="#FEFECE" filter="url(#fgy8eepap5t9j)" points="125.5,417.2422,137.5,429.2422,125.5,441.2422,113.5,429.2422,125.5,417.2422" style="stroke:#A80036;stroke-width:1.5;"/><rect fill="#FEFECE" filter="url(#fgy8eepap5t9j)" height="35.0938" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="103" x="74" y="483.4951"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="83" x="84" y="505.9521">Alert &quot;Success&quot;</text><ellipse cx="125.5" cy="549.5889" fill="#FFFFFF" filter="url(#fgy8eepap5t9j)" rx="11" ry="11" style="stroke:#000000;stroke-width:1.0;"/><ellipse cx="125.5" cy="549.5889" fill="#000000" rx="6" ry="6" style="stroke:#7F7F7F;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.5;" x1="125.5" x2="125.5" y1="233.1055" y2="245.9766"/><line style="stroke:#A80036;stroke-width:1.5;" x1="125.5" x2="10" y1="245.9766" y2="245.9766"/><line style="stroke:#A80036;stroke-width:1.5;" x1="10" x2="10" y1="245.9766" y2="429.2422"/><line style="stroke:#A80036;stroke-width:1.5;" x1="10" x2="113.5" y1="429.2422" y2="429.2422"/><polygon fill="#A80036" points="103.5,425.2422,113.5,429.2422,103.5,433.2422,107.5,429.2422" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.5;" x1="125.5" x2="125.5" y1="173.0938" y2="198.0117"/><polygon fill="#A80036" points="121.5,188.0117,125.5,198.0117,129.5,188.0117,125.5,192.0117" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.5;" x1="197" x2="209" y1="161.0938" y2="161.0938"/><polygon fill="#A80036" points="205,220.0586,209,230.0586,213,220.0586,209,224.0586" style="stroke:#A80036;stroke-width:1.5;"/><line style="stroke:#A80036;stroke-width:1.5;" x1="209" x2="209" y1="161.0938" y2="262.9766"/><line style="stroke:#A80036;stroke-width:1.5;" x1="209" x2="125.5" y1="262.9766" y2="262.9766"/><line style="stroke:#A80036;stroke-width:1.5;" x1="125.5" x2="125.5" y1="129.0938" y2="149.0938"/><polygon fill="#A80036" points="121.5,139.0938,125.5,149.0938,129.5,139.0938,125.5,143.0938" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.5;" x1="125.5" x2="125.5" y1="262.9766" y2="305.2295"/><polygon fill="#A80036" points="121.5,295.2295,125.5,305.2295,129.5,295.2295,125.5,299.2295" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="22" x="129.5" y="285.3125">NOK</text><line style="stroke:#A80036;stroke-width:1.5;" x1="125.5" x2="125.5" y1="74" y2="94"/><polygon fill="#A80036" points="121.5,84,125.5,94,129.5,84,125.5,88" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.5;" x1="231" x2="243" y1="372.3232" y2="372.3232"/><polygon fill="#A80036" points="239,240.9766,243,230.9766,247,240.9766,243,236.9766" style="stroke:#A80036;stroke-width:1.5;"/><line style="stroke:#A80036;stroke-width:1.5;" x1="243" x2="243" y1="62" y2="372.3232"/><line style="stroke:#A80036;stroke-width:1.5;" x1="243" x2="137.5" y1="62" y2="62"/><polygon fill="#A80036" points="147.5,58,137.5,62,147.5,66,143.5,62" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.5;" x1="125.5" x2="125.5" y1="340.3232" y2="360.3232"/><polygon fill="#A80036" points="121.5,350.3232,125.5,360.3232,129.5,350.3232,125.5,354.3232" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.5;" x1="125.5" x2="125.5" y1="384.3232" y2="417.2422"/><polygon fill="#A80036" points="121.5,407.2422,125.5,417.2422,129.5,407.2422,125.5,411.2422" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.5;" x1="125.5" x2="125.5" y1="30" y2="50"/><polygon fill="#A80036" points="121.5,40,125.5,50,129.5,40,125.5,44" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.5;" x1="125.5" x2="125.5" y1="441.2422" y2="483.4951"/><polygon fill="#A80036" points="121.5,473.4951,125.5,483.4951,129.5,473.4951,125.5,477.4951" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" font-style="italic" lengthAdjust="spacing" textLength="61" x="129.5" y="463.5781">merged step</text><line style="stroke:#A80036;stroke-width:1.5;" x1="125.5" x2="125.5" y1="518.5889" y2="538.5889"/><polygon fill="#A80036" points="121.5,528.5889,125.5,538.5889,129.5,528.5889,125.5,532.5889" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[dae05311a6af76554e294dd7f9635dc2]
+@startuml
+start
+repeat
+  :Test something;
+    if (Something went wrong?) then (no)
+      #palegreen:OK;
+      break
+    endif
+    ->NOK;
+    :Alert "Error with long text";
+repeat while (Something went wrong with long text?) is (yes) not (no)
+->//merged step//;
+:Alert "Success";
+stop
+@enduml
+
+PlantUML version 1.2021.12(Wed Oct 06 01:01:58 JST 2021)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) Client VM
+Default Encoding: UTF-8
+Language: ja
+Country: JP
+--></g></svg></p><h4 class="mume-header" id="3352-%E7%8A%B6%E6%85%8B%E9%81%B7%E7%A7%BB%E5%9B%B3">3.3.5.2. &#x72B6;&#x614B;&#x9077;&#x79FB;&#x56F3;</h4>
+
+<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentscripttype="application/ecmascript" contentstyletype="text/css" height="624.6266px" preserveAspectRatio="none" style="width:350px;height:624px;background:#FFFFFF;" version="1.1" viewBox="0 0 350 624" width="350.0455px" zoomAndPan="magnify"><defs><filter height="300%" id="f1353wkcsqwsex" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="1.8184179763605661"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="3.6368359527211322" dy="3.6368359527211322" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[800b1223214602edd7709253107ef117]
+cluster NotShooting--><rect fill="#FEFECE" filter="url(#f1353wkcsqwsex)" height="180.9326" rx="11.3651" ry="11.3651" style="stroke:#A80036;stroke-width:1.3638134822704246;" width="96.3762" x="121.3794" y="73.6459"/><rect fill="#FFFFFF" height="150.3746" rx="11.3651" ry="11.3651" style="stroke:#FFFFFF;stroke-width:0.9092089881802831;" width="90.9209" x="124.107" y="101.4762"/><line style="stroke:#A80036;stroke-width:1.3638134822704246;" x1="121.3794" x2="217.7556" y1="98.7486" y2="98.7486"/><text fill="#000000" font-family="sans-serif" font-size="12.7289" lengthAdjust="spacing" textLength="70.0091" x="134.5629" y="90.4965">NotShooting</text><ellipse cx="173.2043" cy="122.7432" fill="#000000" filter="url(#f1353wkcsqwsex)" rx="9.0921" ry="9.0921" style="stroke:none;stroke-width:0.9092089881802831;"/><g id="NotShooting.Idle"><rect fill="#FEFECE" filter="url(#f1353wkcsqwsex)" height="45.4604" rx="11.3651" ry="11.3651" style="stroke:#A80036;stroke-width:1.3638134822704246;" width="45.4604" x="150.4741" y="187.2971"/><line style="stroke:#A80036;stroke-width:1.3638134822704246;" x1="150.4741" x2="195.9345" y1="212.3997" y2="212.3997"/><text fill="#000000" font-family="sans-serif" font-size="12.7289" lengthAdjust="spacing" textLength="20.0026" x="163.203" y="205.0568">Idle</text></g><ellipse cx="128.6531" cy="14.5473" fill="#000000" filter="url(#f1353wkcsqwsex)" rx="9.0921" ry="9.0921" style="stroke:none;stroke-width:0.9092089881802831;"/><rect fill="#FEFECE" filter="url(#f1353wkcsqwsex)" height="293.8734" rx="11.3651" ry="11.3651" style="stroke:#A80036;stroke-width:1.3638134822704246;" width="333.6342" x="6.3645" y="320.0416"/><rect fill="#FFFFFF" height="263.3154" rx="11.3651" ry="11.3651" style="stroke:#FFFFFF;stroke-width:0.9092089881802831;" width="328.179" x="9.0921" y="347.8719"/><line style="stroke:#A80036;stroke-width:1.3638134822704246;" x1="6.3645" x2="339.9987" y1="345.1443" y2="345.1443"/><text fill="#000000" font-family="sans-serif" font-size="12.7289" lengthAdjust="spacing" textLength="66.3723" x="139.9955" y="337.8013">Configuring</text><ellipse cx="112.6965" cy="364.2376" fill="#000000" filter="url(#f1353wkcsqwsex)" rx="9.0921" ry="9.0921" style="stroke:none;stroke-width:0.9092089881802831;"/><g id="Configuring.NewValueSelection"><rect fill="#FEFECE" filter="url(#f1353wkcsqwsex)" height="45.4604" rx="11.3651" ry="11.3651" style="stroke:#A80036;stroke-width:1.3638134822704246;" width="127.2893" x="49.0518" y="406.9705"/><line style="stroke:#A80036;stroke-width:1.3638134822704246;" x1="49.0518" x2="176.3411" y1="432.0732" y2="432.0732"/><text fill="#000000" font-family="sans-serif" font-size="12.7289" lengthAdjust="spacing" textLength="109.1051" x="58.1439" y="424.7302">NewValueSelection</text></g><rect fill="#FEFECE" filter="url(#f1353wkcsqwsex)" height="97.8394" rx="11.3651" ry="11.3651" style="stroke:#A80036;stroke-width:1.3638134822704246;" width="152.7471" x="36.3229" y="501.5282"/><rect fill="#FFFFFF" height="67.2815" rx="11.3651" ry="11.3651" style="stroke:#FFFFFF;stroke-width:0.9092089881802831;" width="147.2919" x="39.0505" y="529.3585"/><line style="stroke:#A80036;stroke-width:1.3638134822704246;" x1="36.3229" x2="189.07" y1="526.6309" y2="526.6309"/><text fill="#000000" font-family="sans-serif" font-size="12.7289" lengthAdjust="spacing" textLength="100.9222" x="62.2354" y="519.288">NewValuePreview</text><g id="Configuring.NewValuePreview.State1"><rect fill="#FEFECE" filter="url(#f1353wkcsqwsex)" height="45.4604" rx="11.3651" ry="11.3651" style="stroke:#A80036;stroke-width:1.3638134822704246;" width="55.4617" x="47.2334" y="537.5414"/><line style="stroke:#A80036;stroke-width:1.3638134822704246;" x1="47.2334" x2="102.6952" y1="562.6441" y2="562.6441"/><text fill="#000000" font-family="sans-serif" font-size="12.7289" lengthAdjust="spacing" textLength="37.2776" x="56.3255" y="555.3012">State1</text></g><g id="Configuring.NewValuePreview.State2"><rect fill="#FEFECE" filter="url(#f1353wkcsqwsex)" height="45.4604" rx="11.3651" ry="11.3651" style="stroke:#A80036;stroke-width:1.3638134822704246;" width="55.4617" x="119.0609" y="537.5414"/><line style="stroke:#A80036;stroke-width:1.3638134822704246;" x1="119.0609" x2="174.5227" y1="562.6441" y2="562.6441"/><text fill="#000000" font-family="sans-serif" font-size="12.7289" lengthAdjust="spacing" textLength="37.2776" x="128.153" y="555.3012">State2</text></g><!--MD5=[dc702cd49c4e27e6abb2620dc4bb28d8]
+link State1 to State2--><path d="M102.7406,560.2716 C106.6138,560.2716 110.4962,560.2716 114.3694,560.2716 " fill="none" id="State1-to-State2" style="stroke:#A80036;stroke-width:0.9092089881802831;"/><polygon fill="#A80036" points="118.9154,560.2716,110.7326,556.6348,114.3694,560.2716,110.7326,563.9085,118.9154,560.2716" style="stroke:#A80036;stroke-width:0.9092089881802831;"/><!--MD5=[ad6f9944ea8ff01150f6afbfa40da1a7]
+link *start*Configuring to NewValueSelection--><path d="M112.6965,373.4661 C112.6965,380.7762 112.6965,391.814 112.6965,402.1062 " fill="none" id="*start*Configuring-to-NewValueSelection" style="stroke:#A80036;stroke-width:0.9092089881802831;"/><polygon fill="#A80036" points="112.6965,406.7704,116.3333,398.5876,112.6965,402.2244,109.0596,398.5876,112.6965,406.7704" style="stroke:#A80036;stroke-width:0.9092089881802831;"/><!--MD5=[29f84f4f9bf922d2399f1931e6bcbfc8]
+link NewValueSelection to NewValuePreview--><path d="M48.8336,447.8758 C39.5597,453.1219 31.2131,459.941 25.4124,468.7967 C16.3658,482.6257 21.4937,495.7184 32.8224,507.1744 " fill="none" id="NewValueSelection-to-NewValuePreview" style="stroke:#A80036;stroke-width:0.9092089881802831;"/><polygon fill="#A80036" points="36.1683,510.3657,32.7355,502.0952,32.8705,507.2367,27.729,507.3717,36.1683,510.3657" style="stroke:#A80036;stroke-width:0.9092089881802831;"/><text fill="#000000" font-family="sans-serif" font-size="11.8197" lengthAdjust="spacing" textLength="65.463" x="26.3216" y="481.9758">EvNewValue</text><!--MD5=[3ba829c7540e6d1caa286f5598db8935]
+link NewValuePreview to NewValueSelection--><path d="M112.6965,501.3464 C112.6965,486.2353 112.6965,470.1241 112.6965,457.1043 " fill="none" id="NewValuePreview-to-NewValueSelection" style="stroke:#A80036;stroke-width:0.9092089881802831;"/><polygon fill="#A80036" points="112.6965,452.4582,109.0596,460.6411,112.6965,457.0042,116.3333,460.6411,112.6965,452.4582" style="stroke:#A80036;stroke-width:0.9092089881802831;"/><text fill="#000000" font-family="sans-serif" font-size="11.8197" lengthAdjust="spacing" textLength="111.8327" x="113.6057" y="481.9758">EvNewValueRejected</text><!--MD5=[3ba829c7540e6d1caa286f5598db8935]
+link NewValuePreview to NewValueSelection--><path d="M189.4246,525.7132 C220.0377,511.9205 244.4136,492.5998 227.2568,468.7967 C216.3008,453.5856 199.0168,444.348 181.169,438.7564 " fill="none" id="NewValuePreview-to-NewValueSelection-1" style="stroke:#A80036;stroke-width:0.9092089881802831;"/><polygon fill="#A80036" points="176.6229,437.4108,183.4443,443.2121,180.9836,438.6956,185.5001,436.235,176.6229,437.4108" style="stroke:#A80036;stroke-width:0.9092089881802831;"/><text fill="#000000" font-family="sans-serif" font-size="11.8197" lengthAdjust="spacing" textLength="97.2854" x="233.6212" y="481.9758">EvNewValueSaved</text><!--MD5=[df0301a461d11e7e240ad86dcaf92dda]
+link *start to NotShooting--><path d="M128.6531,23.8031 C128.6531,29.9743 128.6531,39.0454 128.6531,49.2152 C128.6531,54.3001 128.6531,59.6597 128.6531,65.0688 C128.6531,67.7733 128.6531,70.4903 128.6531,73.1915 " fill="none" id="*start-to-NotShooting" style="stroke:#A80036;stroke-width:0.9092089881802831;"/><polygon fill="#A80036" points="128.6531,73.1915,132.2899,65.0086,128.6531,68.6454,125.0162,65.0086,128.6531,73.1915" style="stroke:#A80036;stroke-width:0.9092089881802831;"/><!--MD5=[757eb7be151885704a76edfa2189e6cb]
+link *start*NotShooting to Idle--><path d="M173.2043,131.8444 C173.2043,143.3823 173.2043,164.9396 173.2043,182.36 " fill="none" id="*start*NotShooting-to-Idle" style="stroke:#A80036;stroke-width:0.9092089881802831;"/><polygon fill="#A80036" points="173.2043,187.1516,176.8411,178.9687,173.2043,182.6055,169.5675,178.9687,173.2043,187.1516" style="stroke:#A80036;stroke-width:0.9092089881802831;"/><!--MD5=[182fd93969a20881a1cc689412d1880c]
+link Idle to Configuring--><path d="M175.8865,233.0212 C177.2958,245.6865 178.8687,261.9158 179.5688,276.3995 C180.1779,288.9921 180.4689,302.0665 180.5053,315.1864 " fill="none" id="Idle-to-Configuring" style="stroke:#A80036;stroke-width:0.9092089881802831;"/><polygon fill="#A80036" points="180.5144,320.0234,184.1512,311.8405,180.5144,315.4773,176.8775,311.8405,180.5144,320.0234" style="stroke:#A80036;stroke-width:0.9092089881802831;"/><text fill="#000000" font-family="sans-serif" font-size="11.8197" lengthAdjust="spacing" textLength="45.4604" x="180.478" y="289.5786">EvConfig</text><!--MD5=[3a2b2fa238b94d13fdc20ec915ba936c]
+link Configuring to Idle--><path d="M119.1882,319.9688 C118.7609,305.176 120.4065,290.4377 125.0162,276.3995 C129.7987,261.8249 139.209,247.8231 148.4556,236.5398 " fill="none" id="Configuring-to-Idle" style="stroke:#A80036;stroke-width:0.9092089881802831;"/><polygon fill="#A80036" points="151.5833,232.8121,143.5364,236.7407,148.6603,236.2937,149.1072,241.4176,151.5833,232.8121" style="stroke:#A80036;stroke-width:0.9092089881802831;"/><text fill="#000000" font-family="sans-serif" font-size="11.8197" lengthAdjust="spacing" textLength="45.4604" x="125.9254" y="289.5786">EvConfig</text><!--MD5=[26e7517445112d2c59be2e1ba99238c7]
+@startuml
+scale 350 width
+[*] - -> NotShooting
+
+state NotShooting {
+  [*] - -> Idle
+  Idle - -> Configuring : EvConfig
+  Configuring - -> Idle : EvConfig
+}
+
+state Configuring {
+  [*] - -> NewValueSelection
+  NewValueSelection - -> NewValuePreview : EvNewValue
+  NewValuePreview - -> NewValueSelection : EvNewValueRejected
+  NewValuePreview - -> NewValueSelection : EvNewValueSaved
+
+  state NewValuePreview {
+     State1 -> State2
+  }
+
+}
+@enduml
+
+PlantUML version 1.2021.12(Wed Oct 06 01:01:58 JST 2021)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) Client VM
+Default Encoding: UTF-8
+Language: ja
+Country: JP
+--></g></svg></p><h4 class="mume-header" id="3353-%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B9%E5%9B%B3">3.3.5.3. &#x30B7;&#x30FC;&#x30B1;&#x30F3;&#x30B9;&#x56F3;</h4>
+
+<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentscripttype="application/ecmascript" contentstyletype="text/css" height="342px" preserveAspectRatio="none" style="width:349px;height:342px;background:#FFFFFF;" version="1.1" viewBox="0 0 349 342" width="349px" zoomAndPan="magnify"><defs><filter height="300%" id="fpwx52581kh19" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FFFFFF" filter="url(#fpwx52581kh19)" height="126.0547" style="stroke:#A80036;stroke-width:1.0;" width="10" x="157.5" y="121.9609"/><rect fill="#FFFFFF" filter="url(#fpwx52581kh19)" height="41.3516" style="stroke:#A80036;stroke-width:1.0;" width="10" x="162.5" y="160.3125"/><rect fill="#FFFFFF" filter="url(#fpwx52581kh19)" height="9" style="stroke:#A80036;stroke-width:1.0;" width="10" x="318.5" y="239.0156"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="22" x2="22" y1="89.6094" y2="257.0156"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="162" x2="162" y1="89.6094" y2="257.0156"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="323.5" x2="323.5" y1="89.6094" y2="257.0156"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="29" x="5" y="86.5332">User</text><ellipse cx="22.5" cy="15" fill="#FEFECE" filter="url(#fpwx52581kh19)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M22.5,23 L22.5,50 M9.5,31 L35.5,31 M22.5,50 L9.5,65 M22.5,50 L35.5,65 " fill="none" filter="url(#fpwx52581kh19)" style="stroke:#A80036;stroke-width:2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="29" x="5" y="270.5488">User</text><ellipse cx="22.5" cy="283.625" fill="#FEFECE" filter="url(#fpwx52581kh19)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M22.5,291.625 L22.5,318.625 M9.5,299.625 L35.5,299.625 M22.5,318.625 L9.5,333.625 M22.5,318.625 L35.5,333.625 " fill="none" filter="url(#fpwx52581kh19)" style="stroke:#A80036;stroke-width:2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="22" x="148.5" y="68.9238">Job</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="71" x="124" y="86.5332">Workspace</text><ellipse cx="162.5" cy="38.3906" fill="#FEFECE" filter="url(#fpwx52581kh19)" rx="12" ry="12" style="stroke:#A80036;stroke-width:2.0;"/><polygon fill="#A80036" points="158.5,26.3906,164.5,21.3906,162.5,26.3906,164.5,31.3906,158.5,26.3906" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="22" x="148.5" y="270.5488">Job</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="71" x="124" y="288.1582">Workspace</text><ellipse cx="162.5" cy="307.2344" fill="#FEFECE" filter="url(#fpwx52581kh19)" rx="12" ry="12" style="stroke:#A80036;stroke-width:2.0;"/><polygon fill="#A80036" points="158.5,295.2344,164.5,290.2344,162.5,295.2344,164.5,300.2344,158.5,295.2344" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44" x="298.5" y="86.5332">Artifact</text><ellipse cx="323.5" cy="56" fill="#FEFECE" filter="url(#fpwx52581kh19)" rx="12" ry="12" style="stroke:#A80036;stroke-width:2.0;"/><line style="stroke:#A80036;stroke-width:2.0;" x1="311.5" x2="335.5" y1="70" y2="70"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44" x="298.5" y="270.5488">Artifact</text><ellipse cx="323.5" cy="289.625" fill="#FEFECE" filter="url(#fpwx52581kh19)" rx="12" ry="12" style="stroke:#A80036;stroke-width:2.0;"/><line style="stroke:#A80036;stroke-width:2.0;" x1="311.5" x2="335.5" y1="303.625" y2="303.625"/><rect fill="#FFFFFF" filter="url(#fpwx52581kh19)" height="126.0547" style="stroke:#A80036;stroke-width:1.0;" width="10" x="157.5" y="121.9609"/><rect fill="#FFFFFF" filter="url(#fpwx52581kh19)" height="41.3516" style="stroke:#A80036;stroke-width:1.0;" width="10" x="162.5" y="160.3125"/><rect fill="#FFFFFF" filter="url(#fpwx52581kh19)" height="9" style="stroke:#A80036;stroke-width:1.0;" width="10" x="318.5" y="239.0156"/><polygon fill="#A80036" points="145.5,117.9609,155.5,121.9609,145.5,125.9609,149.5,121.9609" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="22.5" x2="151.5" y1="121.9609" y2="121.9609"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="116" x="29.5" y="117.1045">build with parameter</text><line style="stroke:#A80036;stroke-width:1.0;" x1="167.5" x2="214.5" y1="147.3125" y2="147.3125"/><line style="stroke:#A80036;stroke-width:1.0;" x1="214.5" x2="214.5" y1="147.3125" y2="160.3125"/><line style="stroke:#A80036;stroke-width:1.0;" x1="173.5" x2="214.5" y1="160.3125" y2="160.3125"/><polygon fill="#A80036" points="183.5,156.3125,173.5,160.3125,183.5,164.3125,179.5,160.3125" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="99" x="179.5" y="142.4561">Clean workspace</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="172.5" x2="214.5" y1="200.6641" y2="200.6641"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="214.5" x2="214.5" y1="200.6641" y2="213.6641"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="167.5" x2="214.5" y1="213.6641" y2="213.6641"/><polygon fill="#A80036" points="177.5,209.6641,167.5,213.6641,177.5,217.6641,173.5,213.6641" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="132" x="179.5" y="195.8076">{meta.documentName}</text><polygon fill="#A80036" points="306.5,235.0156,316.5,239.0156,306.5,243.0156,310.5,239.0156" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="167.5" x2="312.5" y1="239.0156" y2="239.0156"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="113" x="174.5" y="234.1592">Copy: schedule.csv</text><!--MD5=[a436a5aae82cffe2b5d2ad4dc3ff82ff]
+@startuml
+autoactivate on
+
+
+actor User
+control "Job\nWorkspace" as Job
+Entity Artifact
+
+User -> Job : build with parameter
+Job -> Job : Clean workspace
+return {meta.documentName}
+Job ->  Artifact : Copy: schedule.csv
+@enduml
+
+PlantUML version 1.2021.12(Wed Oct 06 01:01:58 JST 2021)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) Client VM
+Default Encoding: UTF-8
+Language: ja
+Country: JP
+--></g></svg></p><h3 class="mume-header" id="336-%E3%82%BF%E3%82%A4%E3%83%9F%E3%83%B3%E3%82%B0%E3%83%81%E3%83%A3%E3%83%BC%E3%83%88">3.3.6. &#x30BF;&#x30A4;&#x30DF;&#x30F3;&#x30B0;&#x30C1;&#x30E3;&#x30FC;&#x30C8;</h3>
+
+<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentscripttype="application/ecmascript" contentstyletype="text/css" height="229px" preserveAspectRatio="none" style="width:681px;height:229px;background:#FFFFFF;" version="1.1" viewBox="0 0 681 229" width="681px" zoomAndPan="magnify"><defs/><g><line style="stroke:#000000;stroke-width:1.7;" x1="10" x2="10" y1="10" y2="198.0273"/><line style="stroke:#000000;stroke-width:1.7;" x1="664" x2="664" y1="10" y2="198.0273"/><line style="stroke:#AAAAAA;stroke-width:0.5;stroke-dasharray:3.0,5.0;" x1="59" x2="59" y1="10" y2="198.0273"/><line style="stroke:#AAAAAA;stroke-width:0.5;stroke-dasharray:3.0,5.0;" x1="109" x2="109" y1="10" y2="198.0273"/><line style="stroke:#AAAAAA;stroke-width:0.5;stroke-dasharray:3.0,5.0;" x1="159" x2="159" y1="10" y2="198.0273"/><line style="stroke:#AAAAAA;stroke-width:0.5;stroke-dasharray:3.0,5.0;" x1="209" x2="209" y1="10" y2="198.0273"/><line style="stroke:#AAAAAA;stroke-width:0.5;stroke-dasharray:3.0,5.0;" x1="259" x2="259" y1="10" y2="198.0273"/><line style="stroke:#AAAAAA;stroke-width:0.5;stroke-dasharray:3.0,5.0;" x1="309" x2="309" y1="10" y2="198.0273"/><line style="stroke:#AAAAAA;stroke-width:0.5;stroke-dasharray:3.0,5.0;" x1="359" x2="359" y1="10" y2="198.0273"/><line style="stroke:#AAAAAA;stroke-width:0.5;stroke-dasharray:3.0,5.0;" x1="409" x2="409" y1="10" y2="198.0273"/><line style="stroke:#AAAAAA;stroke-width:0.5;stroke-dasharray:3.0,5.0;" x1="459" x2="459" y1="10" y2="198.0273"/><line style="stroke:#AAAAAA;stroke-width:0.5;stroke-dasharray:3.0,5.0;" x1="509" x2="509" y1="10" y2="198.0273"/><line style="stroke:#AAAAAA;stroke-width:0.5;stroke-dasharray:3.0,5.0;" x1="559" x2="559" y1="10" y2="198.0273"/><line style="stroke:#AAAAAA;stroke-width:0.5;stroke-dasharray:3.0,5.0;" x1="609" x2="609" y1="10" y2="198.0273"/><line style="stroke:#AAAAAA;stroke-width:0.5;stroke-dasharray:3.0,5.0;" x1="659" x2="659" y1="10" y2="198.0273"/><line style="stroke:#000000;stroke-width:1.7;" x1="10" x2="664" y1="10" y2="10"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="32" x="15" y="22.457">Client</text><line style="stroke:#000000;stroke-width:1.0;" x1="10" x2="48" y1="26.0938" y2="26.0938"/><line style="stroke:#000000;stroke-width:1.0;" x1="48" x2="58" y1="26.0938" y2="10"/><polygon fill="#D7E0F2" points="15,53.8398,47,53.8398,59,65.8398,47,77.8398,15,77.8398" style="stroke:#D7E0F2;stroke-width:1.5;"/><path d="M15,53.8398 L47,53.8398 L59,65.8398 L47,77.8398 L15,77.8398 " fill="#D7E0F2" style="stroke:#038048;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="20" x="27" y="70.75">idle</text><polygon fill="#D7E0F2" points="71,53.8398,97,53.8398,109,65.8398,97,77.8398,71,77.8398,59,65.8398" style="stroke:#038048;stroke-width:1.5;"/><polygon fill="#D7E0F2" points="121,53.8398,247,53.8398,259,65.8398,247,77.8398,121,77.8398,109,65.8398" style="stroke:#038048;stroke-width:1.5;"/><polygon fill="#D7E0F2" points="271,53.8398,297,53.8398,309,65.8398,297,77.8398,271,77.8398,259,65.8398" style="stroke:#038048;stroke-width:1.5;"/><polygon fill="#D7E0F2" points="321,53.8398,347,53.8398,359,65.8398,347,77.8398,321,77.8398,309,65.8398" style="stroke:#038048;stroke-width:1.5;"/><polygon fill="#D7E0F2" points="371,53.8398,397,53.8398,409,65.8398,397,77.8398,371,77.8398,359,65.8398" style="stroke:#038048;stroke-width:1.5;"/><polygon fill="#D7E0F2" points="421,53.8398,497,53.8398,509,65.8398,497,77.8398,421,77.8398,409,65.8398" style="stroke:#038048;stroke-width:1.5;"/><polygon fill="#D7E0F2" points="521,53.8398,547,53.8398,559,65.8398,547,77.8398,521,77.8398,509,65.8398" style="stroke:#038048;stroke-width:1.5;"/><polygon fill="#D7E0F2" points="571,53.8398,659,53.8398,659,77.8398,571,77.8398,559,65.8398" style="stroke:#D7E0F2;stroke-width:1.5;"/><path d="M659,53.8398 L571,53.8398 L559,65.8398 L571,77.8398 L659,77.8398 " fill="#D7E0F2" style="stroke:#038048;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="28" x="70" y="70.75">send</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="29" x="169.5" y="70.75">await</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="22" x="273" y="70.75">recv</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="20" x="324" y="70.75">idle</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="28" x="370" y="70.75">send</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="29" x="444.5" y="70.75">await</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="22" x="523" y="70.75">recv</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="20" x="571" y="70.75">idle</text><line style="stroke:#A80036;stroke-width:1.5;" x1="259" x2="609" y1="42.4668" y2="42.4668"/><polygon fill="#A80036" points="266.5175,39.7306,266.5175,45.203,259,42.4668" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="601.4825,45.203,601.4825,39.7306,609,42.4668" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="Serif" font-size="14" lengthAdjust="spacing" textLength="191" x="338.5" y="34.3906">no need to re-request from server</text><line style="stroke:#000000;stroke-width:1.7;" x1="10" x2="664" y1="87.8398" y2="87.8398"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="35" x="15" y="100.2969">Server</text><line style="stroke:#000000;stroke-width:1.0;" x1="10" x2="51" y1="103.9336" y2="103.9336"/><line style="stroke:#000000;stroke-width:1.0;" x1="51" x2="61" y1="103.9336" y2="87.8398"/><polygon fill="#D7E0F2" points="15,108.9336,97,108.9336,109,120.9336,97,132.9336,15,132.9336" style="stroke:#D7E0F2;stroke-width:1.5;"/><path d="M15,108.9336 L97,108.9336 L109,120.9336 L97,132.9336 L15,132.9336 " fill="#D7E0F2" style="stroke:#038048;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="20" x="27" y="125.8438">idle</text><polygon fill="#D7E0F2" points="121,108.9336,147,108.9336,159,120.9336,147,132.9336,121,132.9336,109,120.9336" style="stroke:#038048;stroke-width:1.5;"/><polygon fill="#D7E0F2" points="171,108.9336,197,108.9336,209,120.9336,197,132.9336,171,132.9336,159,120.9336" style="stroke:#038048;stroke-width:1.5;"/><polygon fill="#D7E0F2" points="221,108.9336,247,108.9336,259,120.9336,247,132.9336,221,132.9336,209,120.9336" style="stroke:#038048;stroke-width:1.5;"/><polygon fill="#D7E0F2" points="271,108.9336,397,108.9336,409,120.9336,397,132.9336,271,132.9336,259,120.9336" style="stroke:#038048;stroke-width:1.5;"/><polygon fill="#D7E0F2" points="421,108.9336,447,108.9336,459,120.9336,447,132.9336,421,132.9336,409,120.9336" style="stroke:#038048;stroke-width:1.5;"/><polygon fill="#D7E0F2" points="471,108.9336,497,108.9336,509,120.9336,497,132.9336,471,132.9336,459,120.9336" style="stroke:#038048;stroke-width:1.5;"/><polygon fill="#D7E0F2" points="521,108.9336,659,108.9336,659,132.9336,521,132.9336,509,120.9336" style="stroke:#D7E0F2;stroke-width:1.5;"/><path d="M659,108.9336 L521,108.9336 L509,120.9336 L521,132.9336 L659,132.9336 " fill="#D7E0F2" style="stroke:#038048;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="22" x="123" y="125.8438">recv</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="26" x="171" y="125.8438">work</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="28" x="220" y="125.8438">send</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="20" x="324" y="125.8438">idle</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="22" x="423" y="125.8438">recv</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="28" x="470" y="125.8438">send</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="20" x="521" y="125.8438">idle</text><line style="stroke:#000000;stroke-width:1.7;" x1="10" x2="664" y1="142.9336" y2="142.9336"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="117" x="15" y="155.3906">Response freshness</text><line style="stroke:#000000;stroke-width:1.0;" x1="10" x2="133" y1="159.0273" y2="159.0273"/><line style="stroke:#000000;stroke-width:1.0;" x1="133" x2="143" y1="159.0273" y2="142.9336"/><polygon fill="#D7E0F2" points="221,164.0273,597,164.0273,609,176.0273,597,188.0273,221,188.0273,209,176.0273" style="stroke:#038048;stroke-width:1.5;"/><polygon fill="#D7E0F2" points="621,164.0273,659,164.0273,659,188.0273,621,188.0273,609,176.0273" style="stroke:#D7E0F2;stroke-width:1.5;"/><path d="M659,164.0273 L621,164.0273 L609,176.0273 L621,188.0273 L659,188.0273 " fill="#D7E0F2" style="stroke:#038048;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="28" x="395" y="180.9375">fresh</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="27" x="621" y="180.9375">stale</text><line style="stroke:#000000;stroke-width:2.0;" x1="59" x2="59" y1="198.0273" y2="203.0273"/><line style="stroke:#000000;stroke-width:2.0;" x1="109" x2="109" y1="198.0273" y2="203.0273"/><line style="stroke:#000000;stroke-width:2.0;" x1="159" x2="159" y1="198.0273" y2="203.0273"/><line style="stroke:#000000;stroke-width:2.0;" x1="209" x2="209" y1="198.0273" y2="203.0273"/><line style="stroke:#000000;stroke-width:2.0;" x1="259" x2="259" y1="198.0273" y2="203.0273"/><line style="stroke:#000000;stroke-width:2.0;" x1="309" x2="309" y1="198.0273" y2="203.0273"/><line style="stroke:#000000;stroke-width:2.0;" x1="359" x2="359" y1="198.0273" y2="203.0273"/><line style="stroke:#000000;stroke-width:2.0;" x1="409" x2="409" y1="198.0273" y2="203.0273"/><line style="stroke:#000000;stroke-width:2.0;" x1="459" x2="459" y1="198.0273" y2="203.0273"/><line style="stroke:#000000;stroke-width:2.0;" x1="509" x2="509" y1="198.0273" y2="203.0273"/><line style="stroke:#000000;stroke-width:2.0;" x1="559" x2="559" y1="198.0273" y2="203.0273"/><line style="stroke:#000000;stroke-width:2.0;" x1="609" x2="609" y1="198.0273" y2="203.0273"/><line style="stroke:#000000;stroke-width:2.0;" x1="659" x2="659" y1="198.0273" y2="203.0273"/><line style="stroke:#000000;stroke-width:2.0;" x1="59" x2="659" y1="198.0273" y2="198.0273"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="7" x="55.5" y="216.4844">0</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="14" x="102" y="216.4844">25</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="14" x="152" y="216.4844">50</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="14" x="202" y="216.4844">75</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="21" x="248.5" y="216.4844">100</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="21" x="298.5" y="216.4844">125</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="21" x="348.5" y="216.4844">150</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="21" x="398.5" y="216.4844">175</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="21" x="448.5" y="216.4844">200</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="21" x="498.5" y="216.4844">225</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="21" x="548.5" y="216.4844">250</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="21" x="598.5" y="216.4844">275</text><line style="stroke:#A80036;stroke-width:1.5;" x1="59" x2="109" y1="65.8398" y2="120.9336"/><polygon fill="#A80036" points="101.9217,117.2056,105.974,113.528,109,120.9336" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#A80036" font-family="Serif" font-size="14" lengthAdjust="spacing" textLength="27" x="103.9479" y="112.2906">GET</text><line style="stroke:#A80036;stroke-width:1.5;" x1="359" x2="409" y1="65.8398" y2="120.9336"/><polygon fill="#A80036" points="401.9217,117.2056,405.974,113.528,409,120.9336" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#A80036" font-family="Serif" font-size="14" lengthAdjust="spacing" textLength="27" x="403.9479" y="94.5445">GET</text><text fill="#A80036" font-family="Serif" font-size="14" lengthAdjust="spacing" textLength="129" x="403.9479" y="112.2906">If-Modified-Since: 150</text><line style="stroke:#A80036;stroke-width:1.5;" x1="209" x2="259" y1="120.9336" y2="65.8398"/><polygon fill="#A80036" points="255.974,73.2455,251.9217,69.5678,259,65.8398" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#A80036" font-family="Serif" font-size="14" lengthAdjust="spacing" textLength="44" x="253.9479" y="86.0766">200 OK</text><text fill="#A80036" font-family="Serif" font-size="14" lengthAdjust="spacing" textLength="70" x="253.9479" y="103.8227">Expires: 275</text><line style="stroke:#A80036;stroke-width:1.5;" x1="459" x2="509" y1="120.9336" y2="65.8398"/><polygon fill="#A80036" points="505.974,73.2455,501.9217,69.5678,509,65.8398" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#A80036" font-family="Serif" font-size="14" lengthAdjust="spacing" textLength="100" x="503.9479" y="86.0766">304 Not Modified</text><!--MD5=[96a24228dc927c537182d5268a4c2087]
+@startuml
+concise "Client" as Client
+concise "Server" as Server
+concise "Response freshness" as Cache
+
+Server is idle
+Client is idle
+
+@Client
+0 is send
+Client -> Server@+25 : GET
++25 is await
++75 is recv
++25 is idle
++25 is send
+Client -> Server@+25 : GET\nIf-Modified-Since: 150
++25 is await
++50 is recv
++25 is idle
+@100 <-> @275 : no need to re-request from server
+
+@Server
+25 is recv
++25 is work
++25 is send
+Server -> Client@+25 : 200 OK\nExpires: 275
++25 is idle
++75 is recv
++25 is send
+Server -> Client@+25 : 304 Not Modified
++25 is idle
+
+@Cache
+75 is fresh
++200 is stale
+@enduml
+
+PlantUML version 1.2021.12(Wed Oct 06 01:01:58 JST 2021)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) Client VM
+Default Encoding: UTF-8
+Language: ja
+Country: JP
+--></g></svg></p><h1 class="mume-header" id="4-introduction">4. Introduction</h1>
+
+<h2 class="mume-header" id="41-purpose">4.1. Purpose</h2>
+
+<h2 class="mume-header" id="42-scope">4.2. Scope</h2>
+
+<h2 class="mume-header" id="43-reference">4.3. Reference</h2>
+
+<h2 class="mume-header" id="44-term-definition">4.4. Term definition</h2>
+
+<p>&#x2191;&#x3053;&#x3093;&#x306A;&#x611F;&#x3058;&#x3067;&#x7528;&#x8A9E;&#x5B9A;&#x7FA9;&#x3059;&#x308B;&#x3068;(&#x898B;&#x3048;&#x306A;&#x3044;&#x3051;&#x3069;)&#x3001;&#x2193;&#x306E;&#x3088;&#x3046;&#x306B;&#x6CE8;&#x91C8;&#x304C;&#x3064;&#x304F;&#x3002;</p>
+<p>The <abbr title="Hyper Text Markup Language">HTML</abbr> specification<br>
+is maintained by the <abbr title="World Wide Web Consortium">W3C</abbr>.</p>
+<h1 class="mume-header" id="6-software-api">6. Software API</h1>
+
+<h2 class="mume-header" id="61-interface-a">6.1. Interface-A</h2>
+
+<pre data-role="codeBlock" data-info="c" class="language-c"><span class="token keyword keyword-int">int</span> <span class="token function">main</span><span class="token punctuation">(</span> <span class="token keyword keyword-void">void</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre><header id="header"><div id="title">{meta.documentName}</div><div id="document_info"><div id="document_id">{meta.documentID}-{meta.version}</div><div id="version">{meta.version}</div></div></header>
+<footer id="footer">- {meta.issued} -</footer>
+<style> header { position:fixed !important; height:60px; width:100%; z-index:3000; top:0px; left:0px; background-color:white; border-bottom: 1px solid gray; box-sizing: border-box; } #title { padding-left:0.5em; font-size:20px; font-weight:bold; } #document_info{ display:block; position:fixed; top:0.5em; right:1em; font-weight:bold; color:darkgray; font-size:14px; text-align:right;} #document_id::before{content:"DOCUMENT ID: "} #version{ display:inline; } #version::before{content:"VERSION: "} footer { position:fixed; bottom:0px; ;left:0px; width:100%; height:20px; z-index:3500; background-color:white; border-top: 1px solid slategray; text-align:center; font-size:15px; color:#333;} .md-sidebar-toc{ padding-top:60px !important;}</style>
+<script>
+Object.keys(meta).forEach(function (key) { document.getElementsByTagName("body")[0].innerHTML = (document.getElementsByTagName("body")[0].innerHTML).replaceAll("{meta."+key+"}",meta[key]);});
+</script>
+
+      </div>
+      <div class="md-sidebar-toc"><ul>
+<li><a href="#1-document-information">1. Document information</a></li>
+<li><a href="#2-history">2. History</a></li>
+<li><a href="#3-how-to-use-this-document">3. How to use this document</a>
+<ul>
+<li><a href="#31-%E8%A1%A8%E3%82%92%E5%A4%96%E9%83%A8%E3%81%AEcsv%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%8B%E3%82%89%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88%E3%81%99%E3%82%8B%E4%BE%8B">3.1. &#x8868;&#x3092;&#x5916;&#x90E8;&#x306E;csv&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x304B;&#x3089;&#x30A4;&#x30F3;&#x30DD;&#x30FC;&#x30C8;&#x3059;&#x308B;&#x4F8B;</a></li>
+<li><a href="#32-%E8%A1%A8%E3%81%AE%E7%B5%90%E5%90%88%E3%82%92%E8%A1%8C%E3%81%86%E4%BE%8B">3.2. &#x8868;&#x306E;&#x7D50;&#x5408;&#x3092;&#x884C;&#x3046;&#x4F8B;</a></li>
+<li><a href="#33-%E3%83%80%E3%82%A4%E3%82%A2%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%AE%E4%BD%9C%E6%88%90%E4%BE%8B">3.3. &#x30C0;&#x30A4;&#x30A2;&#x30B0;&#x30E9;&#x30E0;&#x306E;&#x4F5C;&#x6210;&#x4F8B;</a>
+<ul>
+<li><a href="#331-%E9%9D%99%E7%9A%84%E3%83%80%E3%82%A4%E3%82%A2%E3%82%B0%E3%83%A9%E3%83%A0">3.3.1. &#x9759;&#x7684;&#x30C0;&#x30A4;&#x30A2;&#x30B0;&#x30E9;&#x30E0;</a>
+<ul>
+<li><a href="#3311-%E3%82%AF%E3%83%A9%E3%82%B9%E5%9B%B3">3.3.1.1. &#x30AF;&#x30E9;&#x30B9;&#x56F3;</a></li>
+</ul>
+</li>
+<li><a href="#332-%E4%BB%BB%E6%84%8F%E3%81%AE%E5%9B%B3%E8%87%AA%E7%94%B1%E5%BA%A6%E9%AB%98%E3%81%84%E3%81%91%E3%81%A9-%E8%BF%BD%E5%8A%A0%E5%89%8A%E9%99%A4%E3%81%AE%E3%83%A1%E3%83%B3%E3%83%86%E3%82%B3%E3%82%B9%E3%83%88%E5%A4%A7">3.3.2. &#x4EFB;&#x610F;&#x306E;&#x56F3;(&#x81EA;&#x7531;&#x5EA6;&#x9AD8;&#x3044;&#x3051;&#x3069;&#x3001;&#x8FFD;&#x52A0;&#x524A;&#x9664;&#x306E;&#x30E1;&#x30F3;&#x30C6;&#x30B3;&#x30B9;&#x30C8;&#x5927;)</a></li>
+<li><a href="#333-%E3%83%87%E3%83%BC%E3%82%BF%E6%A7%8B%E9%80%A0json">3.3.3. &#x30C7;&#x30FC;&#x30BF;&#x69CB;&#x9020;(json)</a></li>
+<li><a href="#334-%E9%9A%8E%E5%B1%A4%E6%A7%8B%E9%80%A0">3.3.4. &#x968E;&#x5C64;&#x69CB;&#x9020;</a></li>
+<li><a href="#335-%E5%8B%95%E7%9A%84%E3%83%80%E3%82%A4%E3%82%A2%E3%82%B0%E3%83%A9%E3%83%A0">3.3.5. &#x52D5;&#x7684;&#x30C0;&#x30A4;&#x30A2;&#x30B0;&#x30E9;&#x30E0;</a>
+<ul>
+<li><a href="#3351-%E3%82%A2%E3%82%AF%E3%83%86%E3%82%A3%E3%83%93%E3%83%86%E3%82%A3%E5%9B%B3">3.3.5.1. &#x30A2;&#x30AF;&#x30C6;&#x30A3;&#x30D3;&#x30C6;&#x30A3;&#x56F3;</a></li>
+<li><a href="#3352-%E7%8A%B6%E6%85%8B%E9%81%B7%E7%A7%BB%E5%9B%B3">3.3.5.2. &#x72B6;&#x614B;&#x9077;&#x79FB;&#x56F3;</a></li>
+<li><a href="#3353-%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B9%E5%9B%B3">3.3.5.3. &#x30B7;&#x30FC;&#x30B1;&#x30F3;&#x30B9;&#x56F3;</a></li>
+</ul>
+</li>
+<li><a href="#336-%E3%82%BF%E3%82%A4%E3%83%9F%E3%83%B3%E3%82%B0%E3%83%81%E3%83%A3%E3%83%BC%E3%83%88">3.3.6. &#x30BF;&#x30A4;&#x30DF;&#x30F3;&#x30B0;&#x30C1;&#x30E3;&#x30FC;&#x30C8;</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#4-introduction">4. Introduction</a>
+<ul>
+<li><a href="#41-purpose">4.1. Purpose</a></li>
+<li><a href="#42-scope">4.2. Scope</a></li>
+<li><a href="#43-reference">4.3. Reference</a></li>
+<li><a href="#44-term-definition">4.4. Term definition</a></li>
+</ul>
+</li>
+<li><a href="#6-software-api">6. Software API</a>
+<ul>
+<li><a href="#61-interface-a">6.1. Interface-A</a></li>
+</ul>
+</li>
+</ul>
+</div>
+      <a id="sidebar-toc-btn">&#x2261;</a>
+    
+    
+    
+    
+    
+    
+    
+    
+<script>
+document.body.setAttribute('html-show-sidebar-toc', true)
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  
+    </body></html>
