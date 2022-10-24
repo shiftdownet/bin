@@ -1,0 +1,12 @@
+{
+    "breadcrumbs.enabled": true,
+    "editor.renderControlCharacters": true,
+    "editor.fontFamily": "MS Gothic",
+    "editor.renderWhitespace": "all",
+    "editor.cursorStyle": "line-thin",
+    "editor.detectIndentation": false,
+    "editor.mouseWheelZoom": true,
+    "editor.tabCompletion": "on",
+    "files.autoGuessEncoding": true,
+    "workbench.colorTheme": "Default Light+",
+}
